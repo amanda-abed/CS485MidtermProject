@@ -53,10 +53,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Follow.cs" />
+     <Compile Include="Assets\Scripts\CharacterController.cs" />
      <Compile Include="Assets\Scripts\MenuControl.cs" />
      <Compile Include="Assets\Scripts\Path.cs" />
-     <Compile Include="Assets\Scripts\VehicleFollowing.cs" />
+     <Compile Include="Assets\Scripts\SharkFollowing.cs" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/Matthew/CS485MidtermProject/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
