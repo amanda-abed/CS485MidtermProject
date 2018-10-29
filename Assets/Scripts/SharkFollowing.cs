@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SharkFollowing : MonoBehaviour 
 {
@@ -15,6 +17,8 @@ public class SharkFollowing : MonoBehaviour
     private float pathLength;
     private Vector3 targetPoint;
 
+    public Text gameOverText;
+
     Vector3 velocity;
 
 	// Use this for initialization
@@ -25,11 +29,17 @@ public class SharkFollowing : MonoBehaviour
 
         //get the current velocity of the vehicle
         velocity = transform.forward / 5;
+
+        gameOverText.text = "";
 	}
 	
 	// Update is called once per frame
 	void Update () 
     {
+        //in game ESC to main menu
+        if(Input.GetKeyDown(KeyCode.Escape)){
+            SceneManager.LoadScene("MainMenu");
+        }
         //Unify the speed
         curSpeed = speed * Time.deltaTime / 5;
 
@@ -89,6 +99,11 @@ public class SharkFollowing : MonoBehaviour
         if (other.gameObject.CompareTag("fish"))
         {
             other.gameObject.SetActive(false);
+            SetGameOver();
         }
+    }
+
+    void SetGameOver(){
+        gameOverText.text = "Game Over!";
     }
 }

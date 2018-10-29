@@ -10,16 +10,18 @@ public class CharacterController: MonoBehaviour
 
     public float speed;
 
+    public Text win;
+    private int count;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-
+        count = 0;
+        win.text = "";
     }
 
     void FixedUpdate()
-    {
-        
+    {  
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
@@ -39,8 +41,14 @@ public class CharacterController: MonoBehaviour
         if (other.gameObject.CompareTag("Pickup"))
         {
             other.gameObject.SetActive(false);
+            count = count + 1;
+            SetWinText();
         }
     }
 
-  
+    void SetWinText(){
+        if(count >= 5){
+            win.text = "Level Complete!";
+        }
+    }  
 }
