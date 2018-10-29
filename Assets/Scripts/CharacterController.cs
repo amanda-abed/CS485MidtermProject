@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CharacterController: MonoBehaviour
 {
@@ -13,11 +14,23 @@ public class CharacterController: MonoBehaviour
     public Text win;
     private int count;
 
+    public GameObject shark;
+
     void Start()
     {
+        shark = GameObject.FindGameObjectWithTag("shark");
         rb = GetComponent<Rigidbody>();
         count = 0;
         win.text = "";
+    }
+
+    void Update(){
+        if(Input.GetKeyDown(KeyCode.Escape)){
+            SceneManager.LoadScene("MainMenu");
+        }
+        if(count == 5){
+            Destroy(shark);
+        }
     }
 
     void FixedUpdate()

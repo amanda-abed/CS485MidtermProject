@@ -104,6 +104,6 @@ public class SharkFollowing : MonoBehaviour
     }
 
     void SetGameOver(){
-        gameOverText.text = "Game Over!";
+        gameOverText.text = "GAME OVER!";
     }
 }
