@@ -12,7 +12,9 @@ public class CharacterController: MonoBehaviour
     public float speed;
 
     public Text win;
-    private int count;
+    public Text countdownText;
+    
+    private int countdown;
 
     public GameObject shark;
 
@@ -20,7 +22,8 @@ public class CharacterController: MonoBehaviour
     {
         shark = GameObject.FindGameObjectWithTag("shark");
         rb = GetComponent<Rigidbody>();
-        count = 0;
+        countdown = 5;
+        SetCount();
         win.text = "";
     }
 
@@ -28,20 +31,44 @@ public class CharacterController: MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape)){
             SceneManager.LoadScene("MainMenu");
         }
-        if(count == 5){
+        if(countdown == 0){
             Destroy(shark);
         }
     }
 
     void FixedUpdate()
     {  
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+     	float moveHorizontal = Input.GetAxis("Horizontal");
+     	float moveVertical = Input.GetAxis("Vertical");
 
-        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+     	Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
-        transform.forward = movement + new Vector3(-90.0f,0.0f,0.0f);
-        rb.AddForce(movement * speed);
+     	transform.forward = movement + new Vector3(-90.0f,0.0f,0.0f);
+     	rb.AddForce(movement * speed);
+
+		if(Input.GetKey(KeyCode.UpArrow)){
+			transform.LookAt(movement + transform.position);
+			transform.eulerAngles = new Vector3(0, 270, 0); 
+	    	transform.Translate(movement * speed * Time.deltaTime, Space.World);
+		}
+        
+        if(Input.GetKey(KeyCode.DownArrow)){
+        	transform.LookAt(movement + transform.position);
+        	transform.eulerAngles = new Vector3(0, -270, 0); 
+        	transform.Translate(movement * speed * Time.deltaTime, Space.World);
+        }
+        
+        if(Input.GetKey(KeyCode.LeftArrow)){
+        	transform.LookAt(movement + transform.position);
+        	transform.eulerAngles = new Vector3(0, 180, 0); 
+        	transform.Translate(movement * speed * Time.deltaTime, Space.World);
+        }
+        
+        if(Input.GetKey(KeyCode.RightArrow)){
+        	transform.LookAt(movement + transform.position);
+        	transform.eulerAngles = new Vector3(0, 0, 0); 
+        	transform.Translate(movement * speed * Time.deltaTime, Space.World);
+        }
 
         if(transform.position.y != 1)
         {
@@ -54,14 +81,21 @@ public class CharacterController: MonoBehaviour
         if (other.gameObject.CompareTag("Pickup"))
         {
             other.gameObject.SetActive(false);
-            count = count + 1;
-            SetWinText();
+            countdown -= 1;
+            SetCount();
         }
     }
 
     void SetWinText(){
-        if(count >= 5){
-            win.text = "Level Complete!";
-        }
+        win.text = "Level Complete!";
+        countdownText.text = "";
+        SceneManager.LoadScene("Abyss");
     }  
+
+    void SetCount(){
+        countdownText.text = "Fish Eggs Left: " + countdown.ToString();
+        if(countdown == 0){
+            SetWinText();
+        }
+    }
 }

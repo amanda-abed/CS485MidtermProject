@@ -1,8 +1,9 @@
 ﻿<Properties StartupConfiguration="{7257375D-FB62-4C2C-F0CF-48234F014449}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SharkFollowing.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CharacterController.cs">
     <Files>
       <File FileName="Assets/Scripts/SharkFollowing.cs" Line="107" Column="15" />
+      <File FileName="Assets/Scripts/CharacterController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
