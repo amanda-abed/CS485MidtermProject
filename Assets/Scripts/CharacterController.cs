@@ -13,7 +13,7 @@ public class CharacterController: MonoBehaviour
 
     public Text win;
     public Text countdownText;
-    
+    private Vector3 movement;
     private int countdown;
 
     public GameObject shark;
@@ -23,6 +23,7 @@ public class CharacterController: MonoBehaviour
         shark = GameObject.FindGameObjectWithTag("shark");
         rb = GetComponent<Rigidbody>();
         countdown = 5;
+        //speed = 10.0f;
         SetCount();
         win.text = "";
     }
@@ -38,13 +39,11 @@ public class CharacterController: MonoBehaviour
 
     void FixedUpdate()
     {  
-     	float moveHorizontal = Input.GetAxis("Horizontal");
-     	float moveVertical = Input.GetAxis("Vertical");
-
-     	Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
-
-     	transform.forward = movement + new Vector3(-90.0f,0.0f,0.0f);
-     	rb.AddForce(movement * speed);
+        movement = Vector3.zero;
+     	movement.x = Input.GetAxis("Horizontal");
+     	movement.z = Input.GetAxis("Vertical");
+        movement.y = 0;
+        movement = movement.normalized;
 
 		if(Input.GetKey(KeyCode.UpArrow)){
 			transform.LookAt(movement + transform.position);
@@ -69,11 +68,12 @@ public class CharacterController: MonoBehaviour
         	transform.eulerAngles = new Vector3(0, 0, 0); 
         	transform.Translate(movement * speed * Time.deltaTime, Space.World);
         }
-
-        if(transform.position.y != 1)
+       /* 
+        if (transform.position.y != 1)
         {
             transform.position = new Vector3(transform.position.x, 1, transform.position.z);
         }
+        */
     }
 
     void OnTriggerEnter(Collider other)
