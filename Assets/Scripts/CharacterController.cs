@@ -65,7 +65,7 @@ public class CharacterController: MonoBehaviour
         
         if(Input.GetKey(KeyCode.RightArrow)){
         	transform.LookAt(movement + transform.position);
-        	transform.eulerAngles = new Vector3(0, 0, 0); 
+            transform.eulerAngles = new Vector3(0, 0, 0); 
         	transform.Translate(movement * speed * Time.deltaTime, Space.World);
         }
        /* 
