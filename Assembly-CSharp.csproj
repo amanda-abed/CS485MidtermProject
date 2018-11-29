@@ -75,6 +75,7 @@
     <None Include="Assets\Jiggly Bubble Free\readme_Jiggly_Bubble_Free.txt" />
     <None Include="Assets\Jiggly Bubble Free\Shaders\Particle Alpha Blended Cubemap.shader" />
     <None Include="Assets\Models\Rock_6_FREE\OKU.txt" />
+    <None Include="Assets\Assets1\Models\Rock_6_FREE\OKU.txt" />
     <None Include="Assets\Jiggly Bubble Free\Shaders\Particle Alpha Blended Cubemap Skybox.shader" />
     <None Include="Assets\Scene\TessellationShaders\Shaders\BumpedSpecularDisplacement.shader" />
     <Reference Include="UnityEditor.StandardEvents">
