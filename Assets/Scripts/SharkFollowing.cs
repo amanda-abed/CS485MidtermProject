@@ -17,7 +17,7 @@ public class SharkFollowing : MonoBehaviour
     private float pathLength;
     private Vector3 targetPoint;
 
-    public Text gameOverText;
+   // public Text gameOverText;
 
     Vector3 velocity;
 
@@ -30,7 +30,7 @@ public class SharkFollowing : MonoBehaviour
         //get the current velocity of the vehicle
         velocity = transform.forward / 5;
 
-        gameOverText.text = "";
+       // gameOverText.text = "";
 	}
 	
 	// Update is called once per frame

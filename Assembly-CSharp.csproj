@@ -54,7 +54,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\controller.cs" />
+     <Compile Include="Assets\Scripts\CamFollow.cs" />
      <Compile Include="Assets\Scripts\CharacterController.cs" />
+     <Compile Include="Assets\Scripts\CoralCharController.cs" />
      <Compile Include="Assets\Scripts\GameOverButtons.cs" />
      <Compile Include="Assets\Scripts\Level2CharacterController.cs" />
      <Compile Include="Assets\Scripts\MenuControl.cs" />
@@ -66,7 +68,9 @@
      <None Include="Assets\Jiggly Bubble Free\readme_Jiggly_Bubble_Free.txt" />
      <None Include="Assets\Jiggly Bubble Free\Shaders\Particle Alpha Blended Cubemap.shader" />
      <None Include="Assets\Models\Rock_6_FREE\OKU.txt" />
+     <None Include="Assets\Assets1\Models\Rock_6_FREE\OKU.txt" />
      <None Include="Assets\Jiggly Bubble Free\Shaders\Particle Alpha Blended Cubemap Skybox.shader" />
+     <None Include="Assets\Assets2\Models\Rock_6_FREE\OKU.txt" />
      <None Include="Assets\Scene\TessellationShaders\Shaders\BumpedSpecularDisplacement.shader" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/Matthew/CS485MidtermProject/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
