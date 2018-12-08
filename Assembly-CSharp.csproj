@@ -64,6 +64,7 @@
     <Compile Include="Assets\controller.cs" />
     <Compile Include="Assets\Scripts\CamFollow.cs" />
     <Compile Include="Assets\Scripts\CharacterController.cs" />
+    <Compile Include="Assets\Scripts\CoralCharController.cs" />
     <Compile Include="Assets\Scripts\GameOverButtons.cs" />
     <Compile Include="Assets\Scripts\Level2CharacterController.cs" />
     <Compile Include="Assets\Scripts\MenuControl.cs" />
@@ -77,18 +78,19 @@
     <None Include="Assets\Models\Rock_6_FREE\OKU.txt" />
     <None Include="Assets\Assets1\Models\Rock_6_FREE\OKU.txt" />
     <None Include="Assets\Jiggly Bubble Free\Shaders\Particle Alpha Blended Cubemap Skybox.shader" />
+    <None Include="Assets\Assets2\Models\Rock_6_FREE\OKU.txt" />
     <None Include="Assets\Scene\TessellationShaders\Shaders\BumpedSpecularDisplacement.shader" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>/Users/amandaabedmamoore/Desktop/CS485MidtermProject/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>/Users/amandaabedmamoore/Desktop/g/CS485MidtermProject/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/amandaabedmamoore/Desktop/CS485MidtermProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/amandaabedmamoore/Desktop/g/CS485MidtermProject/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>/Users/amandaabedmamoore/Desktop/CS485MidtermProject/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>/Users/amandaabedmamoore/Desktop/g/CS485MidtermProject/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/amandaabedmamoore/Desktop/CS485MidtermProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/amandaabedmamoore/Desktop/g/CS485MidtermProject/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

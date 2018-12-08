@@ -18,6 +18,9 @@ public class Level2CharacterController: MonoBehaviour
 
     public GameObject shark;
 
+    private AudioSource audio;  
+    public AudioClip audioClip;
+
     void Start()
     {
         shark = GameObject.FindGameObjectWithTag("shark");
@@ -26,6 +29,7 @@ public class Level2CharacterController: MonoBehaviour
         //speed = 10.0f;
         SetCount();
         win.text = "";
+        audio = GetComponent<AudioSource>();
     }
 
     void Update(){
@@ -81,13 +85,15 @@ public class Level2CharacterController: MonoBehaviour
         if (other.gameObject.CompareTag("Pickup"))
         {
             other.gameObject.SetActive(false);
+            audio.Play();
             countdown -= 1;
             SetCount();
         }
     }
 
     void SetWinText(){
-        win.text = "Level Complete!";
+        win.text = "Congratulations! Game Complete! \n Hit ESC to exit to Main Menu";
+        audio.PlayOneShot(audioClip, 0.7f);
         countdownText.text = "";
     }  
 

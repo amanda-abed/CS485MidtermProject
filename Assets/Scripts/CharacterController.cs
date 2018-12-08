@@ -18,6 +18,9 @@ public class CharacterController: MonoBehaviour
 
     public GameObject shark;
 
+	private AudioSource audio;
+	public AudioClip audioClip;
+
     void Start()
     {
         shark = GameObject.FindGameObjectWithTag("shark");
@@ -26,6 +29,7 @@ public class CharacterController: MonoBehaviour
         //speed = 10.0f;
         SetCount();
         win.text = "";
+        audio = GetComponent<AudioSource>();
     }
 
     void Update(){
@@ -81,6 +85,7 @@ public class CharacterController: MonoBehaviour
         if (other.gameObject.CompareTag("Pickup"))
         {
             other.gameObject.SetActive(false);
+            audio.Play();
             countdown -= 1;
             SetCount();
         }
@@ -88,9 +93,16 @@ public class CharacterController: MonoBehaviour
 
     void SetWinText(){
         win.text = "Level Complete!";
+        audio.PlayOneShot(audioClip, 0.7f);
         countdownText.text = "";
-        SceneManager.LoadScene("Abyss");
+        //SceneManager.LoadScene("Coral");
+        StartCoroutine(WaitAndLoadScene());
     }  
+
+    IEnumerator WaitAndLoadScene(){
+    	yield return new WaitForSeconds(1);
+    	SceneManager.LoadScene("Coral");
+    }
 
     void SetCount(){
         countdownText.text = "Fish Eggs Left: " + countdown.ToString();

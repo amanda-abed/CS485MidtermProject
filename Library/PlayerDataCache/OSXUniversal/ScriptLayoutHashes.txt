@@ -1,11 +1,12 @@
 OSXStandalone
 PlayerPath?
-/Users/amandaabedmamoore/Desktop/CS485MidtermProject/Build/MidtermBuild.app
+/Users/amandaabedmamoore/Desktop/g/CS485MidtermProject/Build/NewBuild12:7.app
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/FirstLevel.unity
-Assets/Scenes/GameOverScene.unity
+Assets/Scenes/Coral.unity
 Assets/Scenes/Abyss.unity
+Assets/Scenes/GameOverScene.unity
 SceneListEnd?
 8a9c87368f85e04af73ef7e40f882438 Assembly-CSharp.dll:.Path
 c422dd62785a6d0afa870fbd111886ce Unity.TextMeshPro.dll:TMPro.TMP_SelectionCaret
@@ -128,11 +129,11 @@ e1ea12ca952c81d81a9a21fdf34446ed UnityEngine.HoloLens.dll:UnityEngine.EventSyste
 dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 96f3ea9f23b6f08e60710ebb4af49174 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 f16835701e71dd5d6fb1fed4b7aff1d8 Unity.TextMeshPro.dll:TMPro.TMP_Asset
-278250ffc390f971f6a6ce3a9ed64d16 Assembly-CSharp.dll:.CharacterController
+50cba4eb3ce7902c4921ff8978e7a873 Assembly-CSharp.dll:.CharacterController
 486cd95c82d8305219c352c06b776e1f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
 c6452d25184b5551af1b106393a4df0b Assembly-CSharp.dll:.MenuControl
 eaf0bcdb10d442a4029d615f41d09957 Unity.TextMeshPro.dll:TMPro.TextContainer
-278250ffc390f971f6a6ce3a9ed64d16 Assembly-CSharp.dll:.Level2CharacterController
+50cba4eb3ce7902c4921ff8978e7a873 Assembly-CSharp.dll:.Level2CharacterController
 201273fb4f889724fb090164b7d6c657 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 486cd95c82d8305219c352c06b776e1f UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 0f27c39183b9eb95eba0a228bea28273 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -175,3 +176,4 @@ d0d5ff7d517e189a84691ac0757e572b Assembly-CSharp.dll:.CamFollow
 2f9af06a78208a67db480e9bfed4a076 Unity.TextMeshPro.dll:TMPro.TextMeshPro
 9318334b30e9f195f573b2ce00154b95 Unity.TextMeshPro.dll:TMPro.TMP_ColorGradient
 93307bd34e39d73fd24e00ec39c25a91 Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
+50cba4eb3ce7902c4921ff8978e7a873 Assembly-CSharp.dll:.CoralCharController
