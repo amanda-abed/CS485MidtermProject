@@ -37,7 +37,10 @@ public class CoralCharController: MonoBehaviour
             SceneManager.LoadScene("MainMenu");
         }
         if(countdown == 0){
-            Destroy(shark);
+        	GameObject[] sharks = GameObject.FindGameObjectsWithTag("shark");
+            foreach(GameObject shark in sharks)
+            GameObject.Destroy(shark);
+            //Destroy(shark);
         }
     }
 
@@ -100,7 +103,7 @@ public class CoralCharController: MonoBehaviour
     }  
 
     IEnumerator WaitAndLoadScene(){
-    	yield return new WaitForSeconds(1);
+    	yield return new WaitForSeconds(0);
     	SceneManager.LoadScene("Abyss");
     }
 

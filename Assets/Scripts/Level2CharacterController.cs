@@ -37,7 +37,10 @@ public class Level2CharacterController: MonoBehaviour
             SceneManager.LoadScene("MainMenu");
         }
         if(countdown == 0){
-            Destroy(shark);
+            GameObject[] sharks = GameObject.FindGameObjectsWithTag("shark");
+            foreach(GameObject shark in sharks)
+            GameObject.Destroy(shark);
+            //Destroy(shark);
         }
     }
 

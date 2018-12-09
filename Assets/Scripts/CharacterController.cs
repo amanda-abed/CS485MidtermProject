@@ -100,7 +100,7 @@ public class CharacterController: MonoBehaviour
     }  
 
     IEnumerator WaitAndLoadScene(){
-    	yield return new WaitForSeconds(1);
+    	yield return new WaitForSeconds(0);
     	SceneManager.LoadScene("Coral");
     }
 

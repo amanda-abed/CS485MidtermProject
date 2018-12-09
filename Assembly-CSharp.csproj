@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\SharkFollowing.cs" />
     <Compile Include="Assets\Scripts\Wander.cs" />
     <None Include="Assets\Assets\Models\Rock_6_FREE\OKU.txt" />
+    <None Include="Assets\ProjectSettings\ProjectVersion.txt" />
     <None Include="Assets\Scene\TessellationShaders\Shaders\BumpedSpecularSmooth.shader" />
     <None Include="Assets\Jiggly Bubble Free\readme_Jiggly_Bubble_Free.txt" />
     <None Include="Assets\Jiggly Bubble Free\Shaders\Particle Alpha Blended Cubemap.shader" />

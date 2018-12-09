@@ -43,7 +43,7 @@ public class Wander : MonoBehaviour
 
     void GetNextPosition()
     {
-        tarPos = new Vector3(Random.Range(minX, maxX), 18.0f, Random.Range(minZ, maxZ));
+        tarPos = new Vector3(Random.Range(minX, maxX), 2.0f, Random.Range(minZ, maxZ));
     }
 
     public void AvoidObstacles(ref Vector3 dir)
@@ -58,7 +58,7 @@ public class Wander : MonoBehaviour
         {
             //Get the normal of the hit point to calculate the new direction
             Vector3 hitNormal = hit.normal;
-            hitNormal.y = 18.0f; //Don't want to move in Y-Space
+            hitNormal.y = 2.0f; //Don't want to move in Y-Space
 
             //Get the new directional vector by adding force to vehicle's current forward vector
             dir = transform.forward + hitNormal * force;
