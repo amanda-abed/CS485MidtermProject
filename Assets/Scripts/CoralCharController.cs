@@ -21,6 +21,8 @@ public class CoralCharController: MonoBehaviour
 	private AudioSource audio;
 	public AudioClip audioClip;
 
+	AsyncOperation scene;
+
     void Start()
     {
         shark = GameObject.FindGameObjectWithTag("shark");
@@ -30,6 +32,8 @@ public class CoralCharController: MonoBehaviour
         SetCount();
         win.text = "";
         audio = GetComponent<AudioSource>();
+        scene = SceneManager.LoadSceneAsync("Abyss");
+        scene.allowSceneActivation = false;
     }
 
     void Update(){
@@ -103,8 +107,9 @@ public class CoralCharController: MonoBehaviour
     }  
 
     IEnumerator WaitAndLoadScene(){
-    	yield return new WaitForSeconds(0);
-    	SceneManager.LoadScene("Abyss");
+    	yield return new WaitForSeconds(1);
+    	scene.allowSceneActivation = true;
+    	//SceneManager.LoadSceneAsync("Abyss");
     }
 
     void SetCount(){

@@ -21,6 +21,8 @@ public class CharacterController: MonoBehaviour
 	private AudioSource audio;
 	public AudioClip audioClip;
 
+	AsyncOperation scene;
+
     void Start()
     {
         shark = GameObject.FindGameObjectWithTag("shark");
@@ -30,6 +32,8 @@ public class CharacterController: MonoBehaviour
         SetCount();
         win.text = "";
         audio = GetComponent<AudioSource>();
+        scene = SceneManager.LoadSceneAsync("Coral");
+        scene.allowSceneActivation = false;
     }
 
     void Update(){
@@ -95,13 +99,13 @@ public class CharacterController: MonoBehaviour
         win.text = "Level Complete!";
         audio.PlayOneShot(audioClip, 0.7f);
         countdownText.text = "";
-        //SceneManager.LoadScene("Coral");
         StartCoroutine(WaitAndLoadScene());
     }  
 
     IEnumerator WaitAndLoadScene(){
-    	yield return new WaitForSeconds(0);
-    	SceneManager.LoadScene("Coral");
+    	yield return new WaitForSeconds(1);
+    	scene.allowSceneActivation = true;
+    	//SceneManager.LoadSceneAsync("Coral");
     }
 
     void SetCount(){

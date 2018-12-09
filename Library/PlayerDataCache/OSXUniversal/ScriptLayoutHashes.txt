@@ -1,6 +1,6 @@
 OSXStandalone
 PlayerPath?
-/Users/amandaabedmamoore/Desktop/g/CS485MidtermProject/Build/NewBuild12:8.app
+/Users/amandaabedmamoore/Desktop/g/CS485MidtermProject/Build/NewBuild12:9.app
 SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/FirstLevel.unity
